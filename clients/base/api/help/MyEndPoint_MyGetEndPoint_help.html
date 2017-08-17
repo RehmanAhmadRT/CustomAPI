@@ -1,0 +1,92 @@
+<h2>Overview</h2>
+<span class="lead">
+    A custom GET endpoint. Returns the $args parameter that is passed to the endpoint method.
+</span>
+
+<h2>Path Variables</h2>
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            :data
+        </td>
+        <td>
+            Data string to pass to the endpoint.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Input Parameters</h2>
+<span class="lead">
+    This endpoint does not accept any input parameters.
+</span>
+
+<h2>Result</h2>
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            __sugar_url
+        </td>
+        <td>
+            String
+        </td>
+        <td>
+            The endpoint path.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            data
+        </td>
+        <td>
+            String
+        </td>
+        <td>
+            The data from path variable.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Output Example</h3>
+<pre class="pre-scrollable">
+{
+    "__sugar_url":"v10\/MyEndpoint\/GetExample\/MyData",
+    "data":"MyData"
+}
+</pre>
+
+<h2>Change Log</h2>
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Version</th>
+        <th>Change</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            v10
+        </td>
+        <td>
+            Added <code>/MyEndpoint/GetExample/:data</code> GET endpoint.
+        </td>
+    </tr>
+    </tbody>
+</table>
