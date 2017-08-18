@@ -36,7 +36,20 @@ class MyEndpointsApi extends SugarApi
     * Method to be used for my MyEndpoint/GetExample endpoint
     */
    public function MyGetMethod($api, $args)
-   {
+   {   
+     $servername ="localhost";
+     $username = "root";
+     $password = "123";
+     $dbname="sugarcrm";
+
+     $conn =mysqli_connect($servername,$username,$password,$dbname);
+
+     $select="select ac.name as account_name,op.name as opportunity_name
+              from accounts_opportunities ao,accounts ac,opportunities op
+              where ao.deleted=0 and ao.opportunity_id=op.id and ao.account_id=ac.id";
+     $result=$conn->query($select);
+     return $result->fetch_assoc();
+/*
    //  $bean = BeanFactory::newBean($Opportunities);
      $sugarQuery = new SugarQuery();
      $sugarQuery->select(array('name'));
@@ -45,7 +58,7 @@ class MyEndpointsApi extends SugarApi
      $result = $sugarQuery->execute();
 
      return $result;
-
+*/
   }
 }
 

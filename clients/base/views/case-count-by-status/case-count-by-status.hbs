@@ -1,0 +1,26 @@
+{{!
+Case Count by Status example dashlet Handlebars template
+We are reusing styling from the Sugar 7 Styleguide for our example dashlet.
+Here we are borrowing CSS used in our Forecast Details dashlet which is suitable for display any set of name value pairs.
+}}
+<div class="forecast-details">
+    {{#each values}}
+        <div class="row-fluid">
+            <span class="span6">
+                {{name}}
+            </span>
+            <span class="span6 tright">
+                {{count}}
+            </span>
+        </div>
+    {{/each}}
+    <div class="row-fluid">
+        <strong class="span6">
+            {{! 'str' is the Sugar 7 Handlebars helper that translates a label into a localized language string}}
+            {{str "Total Cases"}}
+        </strong>
+        <strong class="span6 tright">
+            {{totalCases}}
+        </strong>
+    </div>
+</div>
