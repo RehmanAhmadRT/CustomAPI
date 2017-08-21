@@ -36,7 +36,7 @@ class MyEndpointsApi extends SugarApi
     * Method to be used for my MyEndpoint/GetExample endpoint
     */
    public function MyGetMethod($api, $args)
-   {   
+   {
      $servername ="localhost";
      $username = "root";
      $password = "123";
@@ -61,5 +61,5 @@ class MyEndpointsApi extends SugarApi
 */
   }
 }
-
+//localhost/SugarPro-Full-7.7.1.2/rest/v10/MyEndpoint/GetExample/
 ?>
