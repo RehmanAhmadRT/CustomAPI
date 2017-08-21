@@ -21,11 +21,11 @@
         purl = parent.location.href;
 		baseurl = purl.substring(0,purl.indexOf('#'));
         if (todayorteam=='team') {
-			if ((typeof team != 'undefined')) arg='/wc14/GetMyTeamScores?fifa_code=USA';//+team;
+			if ((typeof team != 'undefined')) arg='/wc14/GetMyTeamScores?fifa_code='+team;
 		} else arg='/wc14/GetScores';
 
 		var self = this;
-		app.api.call('GET', app.api.buildURL('/wc14/GetMyTeamScores?fifa_code=USA'), null,
+		app.api.call('GET', app.api.buildURL(arg), null,
 		{
             success: function (data) {
                 if (this.disposed) {

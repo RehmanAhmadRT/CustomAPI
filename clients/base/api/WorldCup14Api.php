@@ -65,7 +65,7 @@ class WorldCup14Api extends SugarApi
 	 * @return mixed
 	 */
 	private function call_service(
-		$url,
+		$url="",
 		$oauthtoken='',
 		$type='GET',
 		$arguments=array(),

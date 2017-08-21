@@ -1,26 +1,10 @@
+
 <?php
 if(!defined('sugarEntry'))define('sugarEntry', true);
-/*
- *  This file is part of 'Football World Cup 2014 Dashlet'.
- *
- *  'Football World Cup 2014 Dashlet' is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation.
- *
- *  'Football World Cup 2014 Dashlet' is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with 'Football World Cup 2014 Dashlet'.  If not, see http://www.gnu.org/licenses/gpl.html.
- *
- * Copyright 2014 Olivier Nepomiachty - All rights reserved.
- */
-$viewdefs['base']['view']['fifa_worldcup'] = array(
+$viewdefs['base']['view']['worldcup14'] = array(
     'dashlets' => array(
         array(
-            'label' => 'My FIFA',
+            'label' => 'LBL_DASHLET_WORLDCUP14',
             'description' => 'LBL_DASHLET_WC14_DESC',
             'config' => array(
                 'todayorteam' => '-1',
@@ -32,7 +16,7 @@ $viewdefs['base']['view']['fifa_worldcup'] = array(
             ),
             'filter' => array(
                 'module' => array(
-                    'Home',
+                    'Cases',
                 ),
                 'view' => 'record'
             ),
@@ -49,7 +33,6 @@ $viewdefs['base']['view']['fifa_worldcup'] = array(
                 'searchBarThreshold' => -1,
                 'options' => 'DASHLET_WC14_list',
             ),
-
             array(
                 'name' => 'team',
                 'label' => 'LBL_DASHLET_WC14_FAVTEAM',
